@@ -1,0 +1,5 @@
+export { About } from './About/About'
+export { Contact } from './Contact/Contact'
+export { Following } from './Following/Following'
+export { Price } from './Price/Price'
+export { Psychology } from './Psychology/Psychology'
