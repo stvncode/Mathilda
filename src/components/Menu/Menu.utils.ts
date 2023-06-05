@@ -5,8 +5,8 @@ interface MenuItems {
 
 export const menuItems: MenuItems[] = [
   { title: 'À propos', link: 'about' },
-  { title: 'La Psycologie', link: 'psychology' },
+  { title: 'La Psychologie', link: 'psychology' },
   { title: "Types d'acompagnement", link: 'following' },
-  { title: 'Tarifs', link: 'price' },
+  { title: 'Tarifs', link: 'prices' },
   { title: 'Contact', link: 'contact' },
 ]

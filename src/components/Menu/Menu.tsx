@@ -1,4 +1,5 @@
-import { Button, Flex } from '@mantine/core'
+import { Button, Flex, Text } from '@mantine/core'
+import { IconArrowRight } from '@tabler/icons-react'
 import { FC } from 'react'
 import { HashLink } from 'react-router-hash-link'
 import { useMenuStyles } from './Menu.styles'
@@ -17,7 +18,9 @@ export const Menu: FC = () => {
                 )}
             </Flex>
             <a href="https://www.doctolib.fr" target="_blank">
-                <Button color="teal.5">Prendre RDV</Button>
+                <Button color="teal.0" rightIcon={<IconArrowRight size={15} style={{ color: '#000' }} />}>
+                    <Text color="dark">Prendre RDV</Text>
+                </Button>
             </a>
         </Flex>
     )

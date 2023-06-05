@@ -1,1 +1,2 @@
-export { Section } from './Section';
+export { Section } from './Section'
+export { SectionCard } from './SectionCard'

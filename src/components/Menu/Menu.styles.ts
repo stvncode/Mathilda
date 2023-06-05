@@ -4,6 +4,7 @@ export const useMenuStyles = createStyles({
   menu: {
     textDecoration: 'none',
     color: 'inherit',
+    fontSize: '.9rem',
 
     '&:hover': {
       textDecoration: 'underline',
