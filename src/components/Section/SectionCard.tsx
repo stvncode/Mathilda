@@ -19,12 +19,12 @@ export const SectionCard: FC<SectionCardProps> = ({ bg, bgNumber, title, icon, p
 
     return (
         <Card radius="xl" ml={margin.ml} mr={margin.mr} bg={`${bg}.${bgNumber}`} p={40}>
-            <Grid>
+            <Grid         >
                 <SectionImage img={img} show={!isLeft} />
                 <Grid.Col span="auto">
                     <Flex align="center" direction="column" gap={20}>
                         <SectionSwatch bg={bg} bgNumber={bgNumber} icon={icon} />
-                        <Text weight="bold">{title}</Text>
+                        <Text weight="bold" size={18}>{title}</Text>
                         {children}
                     </Flex>
                 </Grid.Col>

@@ -1,19 +1,36 @@
-import { Flex, Text } from '@mantine/core'
+import { BackgroundImage, Flex } from '@mantine/core'
+import { backgroundImage } from 'assets/img'
 import { FC } from 'react'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
+import { Footer } from './Footer'
 import { Header } from './Header'
 import { useLayoutStyles } from './Layout.styles'
 
 export const Layout: FC = () => {
     const { classes } = useLayoutStyles()
 
+    const { pathname } = useLocation()
+
+    const isRoot = pathname === '/'
+
     return (
         <Flex direction="column" className={classes.container}>
             <Header />
-            <Flex direction="column" className={classes.outlet} gap={40}>
-                <Outlet />
-            </Flex>
-            <Text mt={30} mb={20} color="gray.6" align='center'>2023 Steven Travers. All Rights Reserved.</Text>
+            {isRoot ?
+                <>
+                    <Flex direction="column" className={classes.outlet}>
+                        <Outlet />
+                    </Flex>
+                    <Footer />
+                </>
+                :
+                <BackgroundImage src={backgroundImage} >
+                    <div className={classes.outlet}>
+                        <Outlet />
+                    </div>
+                    <Footer />
+                </BackgroundImage>
+            }
         </Flex>
     )
 }

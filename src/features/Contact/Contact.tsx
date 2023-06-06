@@ -5,7 +5,7 @@ import { SectionCard } from 'components/Section'
 import { FC } from 'react'
 
 export const Contact: FC = () => <SectionCard
-    bg="violet"
+    bg="pink"
     bgNumber={0}
     title="Contact"
     children={<Map />}

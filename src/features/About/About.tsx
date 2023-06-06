@@ -1,5 +1,6 @@
 import { Box, Flex, Grid, Image, Text } from '@mantine/core'
 import { about } from 'assets/img'
+import { PlusRedirect } from 'components/ActionIcon'
 import { FC } from 'react'
 import { useAboutStyles } from './About.styles'
 
@@ -11,14 +12,16 @@ export const About: FC = () => {
             <Grid gutter={60} align='flex-start'>
                 <Grid.Col span={6}>
                     <Flex direction="column" gap={30}>
-                        <Text weight="bold" mt={80} size={35}>MATHILDE BAUDEN</Text>
-                        <Text weight="bold" size={18}>Lorem ipsum dolor sit</Text>
+                        <Flex direction="column" gap={6}>
+                            <Text weight="bold" mt={50} size={35}>MATHILDE BAUDEN</Text>
+                            <Text weight="bold" size={18}>Psychologue clinicienne et Neuropsychologue</Text>
+                        </Flex>
                         <Text>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                            Pellentesque tempus eget justo eu euismod. Integer aliquam arcu libero,
-                            id malesuada lacus tincidunt sed.
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Je propose des suivis psychologiques pour les enfants,
+                            les adolescents et/ou leurs parents, des bilans psychométriques (QI) et/ou neuropsychologiques,
+                            de la remédiation cognitive ainsi qu’un soutien à la parentalité.
                         </Text>
+                        <PlusRedirect color="teal.2" link="about" mt={0} />
                     </Flex>
                 </Grid.Col>
                 <Grid.Col span={6}>

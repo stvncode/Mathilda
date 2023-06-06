@@ -1,7 +1,17 @@
-import about from './about.webp'
+import about from './about.png'
+import backgroundImage from './backgroundImage.jpg'
 import contact from './contact.png'
 import following from './following.png'
+import mathilda from './mathilda.png'
 import prices from './prices.png'
 import psychology from './psychology.png'
 
-export { about, psychology, following, prices, contact }
+export {
+  about,
+  psychology,
+  following,
+  prices,
+  contact,
+  backgroundImage,
+  mathilda,
+}

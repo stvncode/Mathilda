@@ -1,0 +1,5 @@
+export { AboutPage } from './About/AboutPage'
+export { ContactPage } from './Contact/ContactPage'
+export { FollowingPage } from './Following/FollowingPage'
+export { Home } from './Home/Home'
+export { PricesPage } from './Prices/PricesPage'
