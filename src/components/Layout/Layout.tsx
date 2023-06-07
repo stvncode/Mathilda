@@ -24,7 +24,7 @@ export const Layout: FC = () => {
                     <Footer />
                 </>
                 :
-                <BackgroundImage src={backgroundImage} >
+                <BackgroundImage src={backgroundImage} style={{ minHeight: '100vh' }}>
                     <div className={classes.outlet}>
                         <Outlet />
                     </div>

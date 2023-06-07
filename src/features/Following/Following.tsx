@@ -8,11 +8,11 @@ import { FC } from 'react'
 import { followingItems } from './Following.utils'
 
 export const Following: FC = () => {
-    const color = "teal"
+    const color = "green"
 
     return <SectionCard
         bg={color}
-        bgNumber={0}
+        bgNumber={1}
         title="Types d'accompagnement"
         icon={<IconBoxMultiple4 />}
         position='right'

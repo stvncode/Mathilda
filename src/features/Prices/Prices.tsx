@@ -12,8 +12,8 @@ export const Prices: FC = () => {
 
     return <SectionCard
         bg={color}
-        bgNumber={0}
-        title="Prices"
+        bgNumber={1}
+        title="Tarifs"
         icon={<IconReportMoney />}
         position='left'
         img={prices}

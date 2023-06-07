@@ -1,6 +1,6 @@
-import { ActionIcon, Menu } from '@mantine/core'
+import { ActionIcon, Flex, Menu, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
-import { IconMenu2 } from '@tabler/icons-react'
+import { IconArrowRight, IconMenu2 } from '@tabler/icons-react'
 import { menuItems } from 'components/Menu/Menu.utils'
 import { FC } from 'react'
 
@@ -31,6 +31,14 @@ export const BurgerIcon: FC = () => {
                         {item.title}
                     </Menu.Item>
                 ))}
+                <Menu.Item color='teal.0'>
+                    <a href="https://www.doctolib.fr" target="_blank" style={{ textDecoration: 'none' }}>
+                        <Flex align="center" gap={15}>
+                            <Text color="dark">Prendre RDV</Text>
+                            <IconArrowRight size={15} />
+                        </Flex>
+                    </a>
+                </Menu.Item>
             </Menu.Dropdown>
         </Menu>
     ) : null

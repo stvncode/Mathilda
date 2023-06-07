@@ -25,7 +25,8 @@ export const FollowingPage: FC = () => {
                 <Text weight="bold" size={25}>Les types d’accompagnements</Text>
                 <div />
             </Flex>
-            <PagesTitle message="Suivi psychologique" />
+            <PagesTitle message="Suivis psychologiques" />
+            <PagesTitle subtitle message="Avec les enfants" />
             <CustomText indent>
                 Lorsque l’enfant se construit, il peut lui être difficile d’exprimer ses ressentis et il peut adopter des comportements difficiles à
                 vivre au quotidien, aussi bien pour lui que pour la famille. Certains enfants ont besoin d’un peu d’aide pour être rassurés, pour appréhender
@@ -43,6 +44,7 @@ export const FollowingPage: FC = () => {
                 Les séances suivantes se déroulent en individuel avec l’enfant et des échanges avec la famille seront prévus en début et/ou en fin de séance.
                 Les informations confiées par l’enfant ne vous seront délivrées qu’avec son accord préalable sauf s’il semble se trouver en situation de danger.
             </CustomText>
+            <PagesTitle subtitle message="Avec les adolescents" />
             <CustomText indent>
                 La période de l’adolescence peut également amener son lot de difficultés et d’anxiété, aussi bien pour le jeune que pour ses parents et sa fratrie.
                 Il s’agit d’un bouleversement de la construction du soi qui peut être complexe à appréhender. Le besoin d’autonomie et d’individuation amène l’adolescent

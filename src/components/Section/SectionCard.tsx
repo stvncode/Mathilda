@@ -1,4 +1,5 @@
-import { Card, ColorSwatch, DefaultMantineColor, Flex, Grid, Image, SystemProp, Text, useMantineTheme } from '@mantine/core'
+import { Card, ColorSwatch, DefaultMantineColor, Flex, Image, SystemProp, Text, useMantineTheme } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { FC, ReactNode } from 'react'
 import { useSectionStyles } from './Section.styles'
 
@@ -13,23 +14,29 @@ interface SectionCardProps {
 }
 
 export const SectionCard: FC<SectionCardProps> = ({ bg, bgNumber, title, icon, position, img, children }) => {
+    const { classes } = useSectionStyles()
+    const thousand = useMediaQuery('(max-width: 1072px)')
+    const eight = useMediaQuery('(max-width: 640px)')
+
     const isLeft = position === 'left'
 
-    const margin = isLeft ? { ml: 180, mr: 250 } : { ml: 250, mr: 180 }
+
+    const small = eight ? 0 : thousand ? 90 : 180
+    const bigger = eight ? 0 : thousand ? 125 : 250
+
+    const margin = isLeft ? { ml: small, mr: bigger } : { ml: bigger, mr: small }
 
     return (
         <Card radius="xl" ml={margin.ml} mr={margin.mr} bg={`${bg}.${bgNumber}`} p={40}>
-            <Grid         >
-                <SectionImage img={img} show={!isLeft} />
-                <Grid.Col span="auto">
-                    <Flex align="center" direction="column" gap={20}>
-                        <SectionSwatch bg={bg} bgNumber={bgNumber} icon={icon} />
-                        <Text weight="bold" size={18}>{title}</Text>
-                        {children}
-                    </Flex>
-                </Grid.Col>
-                <SectionImage img={img} show={isLeft} />
-            </Grid>
+            <div className={classes.container}>
+                {!eight && <SectionImage img={img} show={!isLeft} />}
+                <Flex className={classes.element} align="center" direction="column" gap={20}>
+                    <SectionSwatch bg={bg} bgNumber={bgNumber} icon={icon} />
+                    <Text weight="bold" size={18}>{title}</Text>
+                    {children}
+                </Flex>
+                {!eight && <SectionImage img={img} show={isLeft} />}
+            </div>
         </Card>
     )
 }
@@ -46,7 +53,10 @@ const SectionSwatch: FC<Pick<SectionCardProps, 'bg' | 'bgNumber' | 'icon'>> = ({
     )
 }
 
-const SectionImage: FC<{ img: string, show: boolean }> = ({ img, show }) => show ? <Grid.Col span="auto">
-    <Image src={img} alt="img" width={350} height={350} style={{ minHeight: '50px', minWidth: '100px' }} />
-</Grid.Col> : null
+const SectionImage: FC<{ img: string, show: boolean }> = ({ img, show }) => {
+    const { classes } = useSectionStyles()
 
+    return show ?
+        <Image className={classes.element} src={img} alt="img" width={350} height={350} style={{ minHeight: '50px', minWidth: '100px' }} />
+        : null
+}

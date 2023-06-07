@@ -11,17 +11,16 @@ export const SeedList: FC<SeedListProps> = ({ items, color }) => {
     const theme = useMantineTheme()
 
     return (
-        <Flex direction="column" gap={20} mt={20} >
+        <Flex direction="column" gap={20} mt={20} align="flex-start">
             {items.map((item, i) => <List
                 spacing="xs"
                 size="sm"
-                center
                 key={i}
                 icon={
                     <IconSeeding color={theme.colors[`${color}`][3]} />
                 }
             >
-                <List.Item>{item}</List.Item>
+                <List.Item style={{ textAlign: 'start' }}>{item}</List.Item>
             </List>
             )}
         </Flex>

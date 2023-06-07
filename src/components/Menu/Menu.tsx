@@ -30,7 +30,6 @@ export const Menu: FC = () => {
             <MenuButton />
         </Flex> : <Flex gap={10} align="center">
             <BurgerIcon />
-            <MenuButton />
         </Flex>
 }
 

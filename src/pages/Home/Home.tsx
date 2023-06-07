@@ -27,7 +27,7 @@ export const Home: FC = () => {
   }, [location])
 
   return (
-    <Flex direction="column" mt={100} gap={60}>
+    <Flex direction="column" mt={40} gap={60}>
       <div ref={targetRefs.about} />
       <About />
       <div ref={targetRefs.following} />
