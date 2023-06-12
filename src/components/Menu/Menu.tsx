@@ -1,7 +1,7 @@
 import { Button, Flex, Text } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowRight } from '@tabler/icons-react'
-import { BurgerIcon } from 'components/ActionIcon'
+import { BurgerIcon, ThemeIcon } from 'components/ActionIcon'
 import { FC } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useMenuStyles } from './Menu.styles'
@@ -27,9 +27,13 @@ export const Menu: FC = () => {
                     </div>
                 )}
             </Flex>
-            <MenuButton />
+            <Flex gap={20} align="center">
+                <MenuButton />
+                <ThemeIcon size="lg" />
+            </Flex>
         </Flex> : <Flex gap={10} align="center">
             <BurgerIcon />
+            <ThemeIcon />
         </Flex>
 }
 

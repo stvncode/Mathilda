@@ -1,5 +1,6 @@
 import about from './about.png'
 import backgroundImage from './backgroundImage.png'
+import backgroundImageBlack from './backgroundImageBlack.png'
 import contact from './contact.png'
 import following from './following.png'
 import mathilda from './mathilda.png'
@@ -13,5 +14,6 @@ export {
   prices,
   contact,
   backgroundImage,
+  backgroundImageBlack,
   mathilda,
 }

@@ -8,7 +8,7 @@ import { FC } from 'react'
 import { pricesItems } from './Prices.utils'
 
 export const Prices: FC = () => {
-    const color = 'orange'
+    const color = 'red'
 
     return <SectionCard
         bg={color}
@@ -19,7 +19,7 @@ export const Prices: FC = () => {
         img={prices}
     >
         <Flex direction="column">
-            <SeedList items={pricesItems} color={color} />
+            <SeedList white={false} items={pricesItems} color={color} />
             <PlusRedirect color={color} link="prices" mt={30} />
         </Flex>
     </SectionCard>

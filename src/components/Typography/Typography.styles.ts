@@ -6,7 +6,10 @@ export const useTypographyStyles = createStyles((theme) => ({
     textDecoration: 'underline',
   },
   text: {
-    color: theme.colorScheme === 'dark' ? '#efe7db' : '#202023',
+    color: '#000',
+  },
+  textWhite: {
+    color: theme.colorScheme === 'dark' ? '#fff' : '#000',
   },
   indent: {
     textAlign: 'justify',

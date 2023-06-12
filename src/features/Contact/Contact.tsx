@@ -8,7 +8,7 @@ import { FC } from 'react'
 import { contactItems } from './Contact.utils'
 
 export const Contact: FC = () => {
-    const color = 'red'
+    const color = 'blue'
 
     return <SectionCard
         bg={color}
@@ -19,7 +19,7 @@ export const Contact: FC = () => {
         img={contact}
     >
         <Flex direction="column">
-            <SeedList items={contactItems} color={color} />
+            <SeedList white={false} items={contactItems} color={color} />
             <PlusRedirect color={color} link="contact" mt={30} />
         </Flex>
     </SectionCard>

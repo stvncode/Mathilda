@@ -1,4 +1,5 @@
 import { Flex, Text } from '@mantine/core'
+import { useMediaQuery } from '@mantine/hooks'
 import { IconArrowLeft } from '@tabler/icons-react'
 import { SeedList } from 'components/List'
 import { CustomText } from 'components/Typography'
@@ -12,6 +13,8 @@ export const PricesPage: FC = () => {
 
     const { classes } = useAboutPageStyles()
 
+    const isMobile = useMediaQuery('(max-width: 600px)')
+
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
@@ -24,15 +27,15 @@ export const PricesPage: FC = () => {
                 <div />
             </Flex>
             <Flex direction="column">
-                <SeedList items={pricesItems} color="dark" />
+                <SeedList white items={pricesItems} color="dark" />
             </Flex>
-            <CustomText indent mt={40}>
+            <CustomText indent white mt={40}>
                 Tout rendez-vous non honoré dans les 48h sera considéré comme dû.
             </CustomText>
-            <CustomText indent>
-                Le règlement se fait par chèque ou par espèces. Il peut se faire en plusieurs fois. Les consultations ne bénéficient pas
-                d’un remboursement par l’assurance maladie. Néanmoins, certaines mutuelles peuvent proposer une prise en charge d’une partie des honoraires.
-                N’hésitez pas à vous renseigner, je pourrai vous fournir une facture si tel est le cas.
+            <CustomText indent white>
+                Le règlement se fait par chèque ou par espèces. Les consultations ne bénéficient pas
+                d’un remboursement par l’assurance maladie. Néanmoins, certaines mutuelles peuvent proposer <Text style={{ textAlign: 'start' }} mr={isMobile ? 80 : 0}> <Text span ml={isMobile ? -15 : 0}>une</Text> prise en charge d’une partie des honoraires.
+                    N’hésitez pas à vous renseigner, je pourrai vous fournir une facture si tel est le cas.</Text>
             </CustomText>
         </Flex>
     )

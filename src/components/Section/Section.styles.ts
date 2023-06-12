@@ -5,11 +5,12 @@ export const useSectionStyles = createStyles({
     height: '64px',
     width: '64px',
     borderRadius: '50%',
+    color: '#202023',
   },
   container: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-between',
+    justifyContent: 'flex-start',
     alignItems: 'center',
     textAlign: 'center',
     gap: '2rem',
@@ -20,5 +21,9 @@ export const useSectionStyles = createStyles({
   },
   element: {
     flex: 1,
+    marginLeft: 'auto',
+  },
+  imageElement: {
+    flex: 'inherit',
   },
 })

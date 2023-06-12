@@ -9,7 +9,7 @@ export const Header: FC = () => {
   return (
     <MantineHeader height={60} pr={20} fixed>
       <Flex align="center" justify="space-between" style={{ height: '100%' }}>
-        <Image src="/logo.png" width={250} height={120} onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
+        <Image src="/complete-logo.png" width={230} height={80} onClick={() => navigate('/')} style={{ cursor: 'pointer' }} />
         <Menu />
       </Flex>
     </MantineHeader>

@@ -1,5 +1,6 @@
-import { Card, ColorSwatch, DefaultMantineColor, Flex, Image, SystemProp, Text, useMantineTheme } from '@mantine/core'
+import { Card, ColorSwatch, DefaultMantineColor, Flex, Image, SystemProp, useMantineTheme } from '@mantine/core'
 import { useMediaQuery } from '@mantine/hooks'
+import { CustomText } from 'components/Typography'
 import { FC, ReactNode } from 'react'
 import { useSectionStyles } from './Section.styles'
 
@@ -32,7 +33,7 @@ export const SectionCard: FC<SectionCardProps> = ({ bg, bgNumber, title, icon, p
                 {!eight && <SectionImage img={img} show={!isLeft} />}
                 <Flex className={classes.element} align="center" direction="column" gap={20}>
                     <SectionSwatch bg={bg} bgNumber={bgNumber} icon={icon} />
-                    <Text weight="bold" size={18}>{title}</Text>
+                    <CustomText weight="bold" size={18}>{title}</CustomText>
                     {children}
                 </Flex>
                 {!eight && <SectionImage img={img} show={isLeft} />}
@@ -57,6 +58,6 @@ const SectionImage: FC<{ img: string, show: boolean }> = ({ img, show }) => {
     const { classes } = useSectionStyles()
 
     return show ?
-        <Image className={classes.element} src={img} alt="img" width={350} height={350} style={{ minHeight: '50px', minWidth: '100px' }} />
+        <Image fit='contain' src={img} alt="img" width={400} height={300} className={classes.imageElement} />
         : null
 }

@@ -14,11 +14,10 @@ export const ContactPage: FC = () => {
     const { classes } = useAboutPageStyles()
 
     const handleOpenGoogleMaps = () => {
-        const destination = encodeURIComponent('6 Rue de Jouanet, 35700 Rennes');
-        const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`;
+        const destination = encodeURIComponent('6 Rue de Jouanet, 35700 Rennes')
+        const url = `https://www.google.com/maps/dir/?api=1&destination=${destination}`
 
-        // Open Google Maps in a new window or tab
-        window.open(url, '_blank');
+        window.open(url, '_blank')
     }
 
     useEffect(() => {
@@ -33,7 +32,7 @@ export const ContactPage: FC = () => {
                 <div />
             </Flex>
             <Flex direction="column">
-                <SeedList items={contactItems} color="dark" />
+                <SeedList white items={contactItems} color="dark" />
             </Flex>
             <CustomText indent mt={40}>
                 Voici une carte pour vous aidez à me localiser.

@@ -31,11 +31,11 @@ export const BurgerIcon: FC = () => {
                         {item.title}
                     </Menu.Item>
                 ))}
-                <Menu.Item color='teal.0'>
+                <Menu.Item bg="teal.0">
                     <a href="https://www.doctolib.fr" target="_blank" style={{ textDecoration: 'none' }}>
                         <Flex align="center" gap={15}>
                             <Text color="dark">Prendre RDV</Text>
-                            <IconArrowRight size={15} />
+                            <IconArrowRight size={15} color="#000" />
                         </Flex>
                     </a>
                 </Menu.Item>

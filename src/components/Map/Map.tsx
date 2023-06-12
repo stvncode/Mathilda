@@ -4,10 +4,10 @@ import { FC } from 'react'
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
 export const Map: FC = () => {
-    const position: LatLngExpression = [48.107153, -1.652638]
+    const position: LatLngExpression = [48.13311767578125, -1.6368184089660645]
 
     return (
-        <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '25rem', width: '50rem' }}>
+        <MapContainer center={position} zoom={13} scrollWheelZoom={false} style={{ height: '30rem', width: '100%' }}>
             <TileLayer
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
